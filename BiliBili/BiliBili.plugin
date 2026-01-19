@@ -1,10 +1,10 @@
-#!name = Bilibili Tab Clean
-#!desc = 移除 B 站底部直播按钮与顶部游戏图标
+#!name = B站界面精简
+#!desc = 移除底部直播按钮和顶部游戏图标
 
 [Script]
-# 匹配你在日志里抓到的请求地址
-http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2 script-path=https://raw.githubusercontent.com/Scatys0/Myloon/main/Bilibili/BiliTab.js, requires-body=true, tag=B站精简
+# 使用加速镜像前缀确保脚本下载成功
+http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2 script-path=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Scatys0/Myloon/main/BiliBili/BiliTab.js, requires-body=true, tag=B站精简
 
 [MITM]
-# 必须解密该域名才能读取并修改 Body
+# 自动授权解密 B 站域名
 hostname = %APPEND% app.bilibili.com
