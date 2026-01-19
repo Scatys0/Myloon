@@ -3,7 +3,7 @@
 
 [Script]
 # 匹配你在日志里抓到的请求地址
-http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2 script-path=https://raw.githubusercontent.com/你的用户名/仓库名/main/Bilibili/BiliTab.js, requires-body=true, tag=B站精简
+http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2 script-path=https://raw.githubusercontent.com/Scatys0/Myloon/main/Bilibili/BiliTab.js, requires-body=true, tag=B站精简
 
 [MITM]
 # 必须解密该域名才能读取并修改 Body
