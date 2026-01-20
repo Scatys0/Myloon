@@ -1,9 +1,10 @@
-#!name = B站界面精简
-#!desc = 移除底部直播按钮和顶部游戏图标
+#!name=B站界面精简
+#!desc=移除底部直播按钮和顶部游戏图标
+#!author=Zhang Shuai
+#!homepage=https://github.com/Scatys0/Myloon
 
 [Script]
-# 更换为 cdn.jsdmirror.com 镜像，这个目前更稳定
-http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2 script-path=https://cdn.jsdmirror.com/gh/Scatys0/Myloon@main/BiliBili/BiliTab.js, requires-body=true, tag=B站精简
+http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2 script-path=https://raw.githubusercontent.com/Scatys0/Myloon/main/BiliBili/BiliTab.js, requires-body=true, tag=B站精简
 
 [MITM]
 hostname = %APPEND% app.bilibili.com
